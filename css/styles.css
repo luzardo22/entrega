@@ -1,5 +1,4 @@
 body{
-    
     background: #3a3a3a;
     font-family: 'Raleway', sans-serif;
     color: white;
@@ -7,15 +6,21 @@ body{
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
 nav{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
-.bt0,.bt1,.bt2,.bt3{
-    
-    border: none;
-    background: none;
-    color: #ffffff;
-    font-size: large;
-
+.icono{
+    display: flex;
+    align-items: center;
+    margin: 15px;
+}
+.menu{
+    display: flex;
+    list-style: none;
+    margin: 10px;
+    color: aliceblue;
+}
+.menu li a{
+    padding: 5px 10px;
 }
 main {
     max-width: 1200px;
@@ -47,11 +52,10 @@ h2{
     text-align: center;
     margin: 5%;
 }
-.descripcion{
+#inicio{
     margin: 5%;
     text-align: center;
 }
-
 .micv{
     width: 220px;
     height: 60px;
@@ -91,26 +95,21 @@ h2{
     align-items:center;
 }
 .icon1{
-    /*display: flex;
+    filter: invert(99%);
+    display: flex;
     align-content: center;
-    width: 50%;
-    height: 10%;
-    margin: 10px 5px 10px 10px;
-    padding: auto;
-    border: 40%;*/
+    justify-content: space-around; 
 }
+
 footer{
     display: flex;
-    width: 330px;
-    height: 130px;
-    margin: 10px 5px 10px 10px;
-    padding: auto;
-    border: none;
-    max-width: 1200px;
-    margin: auto;
-
+    align-content: center;
+    justify-content: center;
+    margin: 6%;
 }
-
+.con li{
+    padding: 5px;
+}
 /* Aquí les dejamos como ayuda este "reset" en el cual ajustamos algunas propiedades
 *  cuyos valores asigna por defecto el navegador.
 */
