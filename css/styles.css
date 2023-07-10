@@ -4,155 +4,211 @@ body{
     color: white;
 }
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
-nav{
-    display: flex;
-    justify-content: space-between;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
 }
-.icono{
+header{
     display: flex;
     align-items: center;
-    margin: 15px;
+    justify-content: space-between;
+    padding: 2%;
+}
+.logo{
+    font-size: 30px;
+    color: white;
+
 }
 .menu{
     display: flex;
-    list-style: none;
-    margin: 10px;
-    color: aliceblue;
 }
-.menu li a{
-    padding: 5px 10px;
+.menu a{
+    display: flex;
+    margin: 10px;
+    padding: 8px;    
+    color: #fff;
+    padding: 8px 8px;
+}
+button.descarga{
+    border-radius: 10px;
+}
+
+/*Inicia el codigo funcion*/
+
+.descarga {
+    position: relative;
+    overflow: hidden;
+  }
+  .texto-descarga {
+    transition: opacity 0.1s ease-out;
+  }
+  .logo-descarga,
+  .logo-check {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.1s ease-in;
+    opacity: 0;
+  }
+  .logo-check {
+    opacity: 0;
+    transition: 1s;
+  }
+  .descarga.clicked .texto-descarga {
+    opacity: 0;
+  }
+  .descarga.clicked .logo-check {
+    opacity: 1;
+    background-color: #44ffff;
+    transition: 2s;
+  }
+  button.descarga.clicked{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: 3s;
+  }
+
+
+/*Acaba el codigo de la funcion*/
+.descarga a{
+    font-size: 20px;
+    margin: 10px;
+    width: 160px;
+    height: 30px;
+    font-weight: 700;  
+    transition: 0.5s; 
+    color: black;
+}
+.descarga:hover, .active{
+    background-color:#00a9a5ff;
+    border-radius: 10px;
+}
+.active{
+    background-color:#00a9a5ff;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+ul {
+    list-style: none;
+}
+.foto2{
+    border-radius: 50%;
+    margin-bottom: 20px;  
+}
+.foto img{
+    width: 300px;
+    border: solid #00a9a5ff 5px;
+}
+h1{
+    font-size: 48px;
+    color: azure;
+    font-size: 25px;
+}
+.descripcion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    min-height: 100vh;
+    padding-top: 50px;
+}
+@media(min-width:1024px){
+    h1{
+        text-align: left;
+        font-size: 48px;
+    }
+    .descripcion{
+        flex-direction: row;
+        text-align: left;
+    }
+    .descarga a{
+        text-align: left;
+        border-radius: 10px;
+        
+    }
+    #parrafo1{
+        margin: 80px;
+    }
+    #parrafo1 p{
+        font-size: 30px;
+    }
+    .esp{
+        border: solid white;
+        width: 480px;
+    }
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
 }
 main {
     max-width: 1200px;
     margin: auto;
 }
-header{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin: auto;
-    width: 100%;
-    height: 200%;
-    object-fit: cover;
+#parrafo1{
+    font-size: 30px;
+    color:white; 
 }
-.foto2{
-    box-sizing: border-box;
-    margin: auto;
-    padding: auto;  
-}
-h1{
+.contenido2{
+    font-size: 30px;
+    background-color:#00a9a5ff;
+    color: #3a3a3a; 
+    border-radius: 20px;
     text-align: center;
-    font-size: 70px; 
+    margin: 50px 50px 100px 50px;
+    padding: 10px;
+    border: solid  #44ffff ;
 }
 h3{
-    font-size: larger;
+    font-size: 40px;
+    color: white;
+    text-align: center;   
 }
-h2{
-    font-size: 35px;
+.lista1{
+    font-size: 30px;
+    background-color: #00a9a5ff;
+    color: #3a3a3a; 
+    border-radius: 20px;
     text-align: center;
-    margin: 5%;
+    margin: 50px 50px 100px 50px;
+    padding: 2%;
+    border: solid  #44ffff;
 }
-#inicio{
-    margin: 5%;
-    text-align: center;
-}
-.micv{
-    width: 220px;
-    height: 60px;
-    border-radius: 15px;
-    font-size: larger;
-    background: #9f70c3;
-    color: #080707;
-}
-#listas{
-    margin: 10%;
-    color: burlywood;
+
+#consultas{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    padding: auto; 
+    margin: 20px;
 }
-.hobies{
-    border: #ffffff solid;
-    float: left;
-    width: 230px;
+#consultas a:hover{
+    border-radius: 10px;
+    background-color: #44ffff;
     height: 100px;
-    background: none;
-    font-style: italic;
-    font-weight: bold;
-    color: bisque;
-    text-align: center;
+    border: solid  #00a9a5ff;
 }
-.fortaleza{
-    border: #ffffff solid;
-    text-align: center;
-    float: left;
-    width: 230px;
-    height: 100px;
-    background: none;
-    font-style: italic;
-    font-weight: bold;
-    color: rgb(245, 196, 255);
-    align-items:center;
-}
-.icon1{
+.img1, .img2, .img3{
     filter: invert(99%);
-    display: flex;
-    align-content: center;
-    justify-content: space-around; 
+    width: 100px;
+    margin : auto;
 }
-
 footer{
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    margin: 6%;
-}
-.con li{
-    padding: 5px;
-}
-/* Aquí les dejamos como ayuda este "reset" en el cual ajustamos algunas propiedades
-*  cuyos valores asigna por defecto el navegador.
-*/
-
-/* Reset */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    /* Para que el scrolleo en la one page sea suave */
-    scroll-behavior: smooth;
+    text-align: center;
+    color: #fff;
+    margin: auto;
+    padding: 1%;
+    font-size: 20px;
 }
 
-/* Para quitar los puntos a los items de listas */
-ul {
-    list-style: none;
-}
-
-/* Para que los enlaces hereden el color de texto y no tengan subrayado */
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Este max-width es para que el contenido no se "estire" demasiado hacia los costados y
-*  el margin: auto; para tenerlo centrado fácilmente ;)
-*/
-
-
-/* Recomendaciones! 
-*  - Comenzar desde lo más general y luego ir hacia lo mas específico, asignando primero
-*    "estilos generales". Una buena idea sería comenzar por el <body> ;)
-*
-*  - Recuerden que queremos evitar "repetir código", en CSS usando la cualidad de la herencia
-*    podemos setear ciertas propiedades en un elemento padre y dejar que sean heredadas (por ejemplo: font-size)
-*
-*  - Nadie sabe todas las propiedades CSS de memoria, si no saben como hacer algo no lo recuerdan, la respuesta
-*    pueden encontrarla buscando en la web algo como "CSS como hacer ... " o "propiedad css para hacer ..."
-*
-*  - Usen mucho las herramientas para desarrolladores del navegador para ir
-*    probando el CSS que escriben, resolver dudas y problemas.
-*
-*  - Paciencia, resiliencia y creatividad! No se desanimen, las primeras experiencias maquetando con HTML y CSS
-*    pueden ser frustrantes, pero estas habilidades se van desarrollando con la experiencia, es como aprender
-*    un trabajo manual, hacer una artesanía, tocar un instrumento musical... la práctica es todo!
-*/
